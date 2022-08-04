@@ -1,0 +1,28 @@
+{
+    "dependencies": {
+        "dotenv": "^16.0.1",
+        "express": "^4.18.1",
+        "mongoose": "^6.5.1",
+        "multer": "^1.4.5-lts.1",
+        "nodemon": "^2.0.19"
+    },
+    "name": "blog-server",
+    "description": "��#\u0000 \u0000B\u0000a\u0000s\u0000i\u0000c\u0000B\u0000l\u0000o\u0000g\u0000-\u0000S\u0000e\u0000r\u0000v\u0000e\u0000r\u0000\r\u0000 \u0000",
+    "version": "1.0.0",
+    "main": "index.js",
+    "devDependencies": {},
+    "scripts": {
+        "start": "nodemon index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/samsuzzaman1998/BasicBlog-Server.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/samsuzzaman1998/BasicBlog-Server/issues"
+    },
+    "homepage": "https://github.com/samsuzzaman1998/BasicBlog-Server#readme"
+}
