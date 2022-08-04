@@ -21,5 +21,21 @@ router.post("/register", async (req, res) => {
 });
 
 // Login ======
+router.post("/login", async (req, res) => {
+    try {
+        const user = User.findOne({ username: req.body.username });
+        !user && res.status(400).json("Wrong information"); // when no user
+
+        // when there is an user
+        const validate = await bcrypt.compare(req.body.password, user.password); // req theke je pass asche tar sathe db te je user peyechi tar pass comapre kora hocche
+        !validate && res.status(400).json("Wrong information");
+
+        // there is valid user
+        const { password, ...othersInfo } = user._doc; // for not sending password
+        res.status(200).json(othersInfo);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
 
 module.exports = router;
